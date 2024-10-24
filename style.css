@@ -1,0 +1,39 @@
+body{
+    background: -webkit-linear-gradient(10deg, purple, blue,black);
+    /* añado un fondo de degradado a mi pág */
+}
+.galeria {
+    display: flex; /*para poder usar los atributos del felxbox*/
+    flex-wrap: wrap; /*se usa para tener multiples lines en este caso seria tener las imagenes en 3 columnas*/
+    justify-content: center; /*se utiliza para que las imagenes queden centrados en la pág*/
+     gap: 10px; /* Añade un espacio de entre los elementos hijos del contenedor,esto sepra sin necesidad de margen */
+    max-width: 800px; /*Establece un ancho máximo para el contenedor.*/
+    margin: 0 auto; /*añade una margen de cero pixeles a la pág*/
+   
+}
+
+.galeria img {
+    width: 23%; /*se le añade ancho a las imagenes*/
+    height: auto; /*se le añade alto a las imagenes*/
+    object-fit: cover; /*mantiene la imagenes ajustandola a su  proporción original*/
+}
+
+.galeria img {
+    border-radius: 5px;/*se añade un borde redondiado a las imagenes*/
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);/*se añade un tipo der sombreado*/
+    transition: all 0.3s ease; /*realiza un cambio gradualmente entre las imagenes*/
+}
+
+@media (max-width: 768px) {
+    /*Este bloque de estilo se aplica cuando el ancho de la pantalla es de 768 píxeles o menos.*/
+    .galeria img {
+        width: 48%; /*se añade ancho a las imagen dentro del contenedor*/
+    }
+}
+
+@media (max-width: 480px) {
+    /*Este bloque se aplica a pantallas de 480 píxeles o menos*/
+    .galeria img {
+        width: 95%; /*se añade ancho a las imagen dentro del contenedor*/
+    }
+}
